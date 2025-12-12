@@ -1,197 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hasan Jehangir – Academic Portfolio</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hasan Jehangir – Academic Portfolio</title>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: "Poppins", sans-serif;
-            transition: background 0.3s, color 0.3s;
-            background: #fafafa; 
-            color: #222;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    transition: background 0.3s, color 0.3s;
+    background: #fafafa;
+    color: #222;
+}
 
-        /* DARK MODE */
-        body.dark {
-            background: #0d1117;
-            color: #e6edf3;
-        }
-        body.dark .section {
-            background: #161b22;
-            border: 1px solid #30363d;
-        }
-        body.dark nav {
-            background: #0d1117;
-        }
-        body.dark nav a:hover {
-            background: #30363d;
-        }
-        body.dark header {
-            background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
-        }
-        body.dark .footer {
-            background: #0d1117;
-        }
+/* DARK MODE */
+body.dark { background: #0d1117; color: #e6edf3; }
+body.dark .section { background: #161b22; border: 1px solid #30363d; }
+body.dark nav { background: #0d1117; }
+body.dark nav a:hover { background: #30363d; }
+body.dark header { background: linear-gradient(135deg, #1f1f1f, #2a2a2a); color: #e6edf3; }
+body.dark .footer { background: #0d1117; color: #e6edf3; }
 
-        header {
-            text-align: center;
-            background: linear-gradient(135deg, #4a4a4a, #fafafa;); /* grey gradient */
-            color: white;
-            padding: 40px;
-        }
+/* HEADER */
+header {
+    text-align: center;
+    background: #fafafa; 
+    color: #111;
+    padding: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
-        .profile-pic {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            border: 5px solid white;
-            object-fit: cover;
-            margin-bottom: 15px;
-        }
+.profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid #ccc;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
 
-        nav {
-            text-align: center;
-            background: #1f1f1f; /* dark grey */
-            padding: 15px;
-        }
+/* CV Buttons */
+.btn {
+    padding: 10px 20px;
+    background: #0b3d91;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    display: inline-block;
+    margin: 8px 5px;
+    transition: 0.3s;
+}
+.btn:hover { background: #08296f; }
 
-        nav a {
-            color: white;
-            padding: 10px 18px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s;
-        }
+/* Social Icons */
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #0b3d91;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.social-icons a:hover { color: #08296f; }
 
-        nav a:hover {
-            background: #3a3a3a;
-            border-radius: 5px;
-        }
+/* NAVIGATION */
+nav {
+    text-align: center;
+    background: #111;
+    padding: 12px 0;
+}
+nav a {
+    color: #fafafa;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+nav a:hover { background: #1f1f1f; border-radius: 5px; }
 
-        .section {
-            max-width: 1050px;
-            margin: auto;
-            background: white;
-            padding: 35px;
-            border-radius: 12px;
-            margin-top: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-        }
+/* SECTIONS */
+.section {
+    max-width: 1050px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    margin-top: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+h2 {
+    border-left: 6px solid #0b3d91;
+    padding-left: 12px;
+    margin-bottom: 20px;
+    color: #111;
+}
 
-        h2 {
-            border-left: 6px solid #6c6c6c; /* grey accent */
-            padding-left: 12px;
-            margin-bottom: 20px;
-        }
-
-        /* Social Icons */
-        .social-icons a {
-            display: inline-block;
-            margin: 0 10px;
-            font-size: 20px;
-            text-decoration: none;
-            color: white;
-        }
-
-        /* Cards */
-        .card {
-            background: #ececec;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 12px;
-            border-left: 6px solid #8d8d8d;
-        }
-        body.dark .card {
-            background: #1d2330;
-            border-left: 6px solid #58a6ff;
-        }
-
-        .project-img {
+/* PROJECT IMAGES */
+.project-img {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    max-height: 250px; /* optional, adjust as needed */
+    height: auto;
+    max-height: 250px;
     border-radius: 10px;
-    object-fit: contain; /* make full image visible */
+    object-fit: contain;
     cursor: pointer;
     transition: transform 0.3s;
+    border: 1px solid #ccc;
 }
-.project-img:hover {
-    transform: scale(1.05);
+.project-img:hover { transform: scale(1.03); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+
+/* CARD */
+.card {
+    background: #ececec;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    border-left: 6px solid #8d8d8d;
+}
+body.dark .card { background: #1d2330; border-left: 6px solid #58a6ff; }
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    background: #111;
+    color: #fafafa;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 14px;
 }
 
+/* DARK MODE BUTTON */
+.toggle-btn {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    background: #222;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 999;
+}
 
-        /* Buttons */
-        .btn {
-            padding: 10px 20px;
-            background: #5b5b5b;
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 8px;
-            display: inline-block;
-            margin-top: 10px;
-        }
-        .btn:hover {
-            background: #3a3a3a;
-        }
-
-        /* Dark Mode Button */
-        .toggle-btn {
-            position: fixed;
-            top: 15px;
-            right: 20px;
-            background: #222;
-            color: white;
-            padding: 10px 18px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-            z-index: 999;
-        }
-
-        .footer {
-            text-align: center;
-            background: #1f1f1f;
-            color: white;
-            padding: 15px;
-            margin-top: 30px;
-        }
-
-    </style>
+/* IMAGE MODAL */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 900px;
+}
+.modal-content, #caption { animation-name: zoom; animation-duration: 0.3s; }
+@keyframes zoom { from {transform:scale(0)} to {transform:scale(1)} }
+.close { position: absolute; top: 20px; right: 35px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; }
+</style>
 </head>
 
 <body>
-
 <!-- DARK MODE BUTTON -->
 <div class="toggle-btn" onclick="toggleDarkMode()">🌙 Dark / ☀️ Light</div>
 
 <header>
     <img src="profile.jpeg" class="profile-pic" alt="Profile">
-
     <h1>Hasan Jehangir</h1>
     <p>AI Researcher • ML/DL Engineer • Computer Vision • Healthcare AI • Computational Neuroscience</p>
-
     <div class="social-icons">
         <a href="https://github.com/hasanJehangir">GitHub</a>
         <a href="https://www.linkedin.com/in/hasan-j-397933232/">LinkedIn</a>
         <a href="mailto:hasanjehangir6@gmail.com">Email</a>
     </div>
-
     <br>
-
-    <!-- HEADER CV BUTTONS -->
-<a class="btn" href="Hasan_Jehangir's_CV.pdf" target="_blank">📄 Open Academic CV</a>
-<a class="btn" href="Hasan_Jehangir's_CV.pdf" download>📄 Download Academic CV</a>
-
-<a class="btn" href="Hasan's CV.pdf" target="_blank">📄 Open Job CV</a>
-<a class="btn" href="Hasan's CV.pdf" download>📄 Download Job CV</a>
-
+    <!-- CV Buttons -->
+    <a class="btn" href="Hasan_Jehangir's_CV.pdf" target="_blank">📄 Open Academic CV</a>
+    <a class="btn" href="Hasan_Jehangir's_CV.pdf" download>📄 Download Academic CV</a>
+    <a class="btn" href="Hasan's CV.pdf" target="_blank">📄 Open Job CV</a>
+    <a class="btn" href="Hasan's CV.pdf" download>📄 Download Job CV</a>
 </header>
 
 <nav>
@@ -204,17 +202,13 @@
     <a href="#contact">Contact</a>
 </nav>
 
-<!-- ABOUT -->
+<!-- Sections (About, Research, Experience, Projects, Publications, Skills, Contact) -->
 <div class="section" id="about">
     <h2>About Me</h2>
-    <p>
-        Passionate AI and Deep Learning researcher focusing on healthcare AI, biomedical signal processing,
-        computational neuroscience, computer vision, and multimodal architectures.
-        Only Pakistani Finalist in Microsoft Student Ambassadors AI Competition.
-    </p>
+    <p>Passionate AI and Deep Learning researcher focusing on healthcare AI, biomedical signal processing,
+    computational neuroscience, computer vision, and multimodal architectures. Only Pakistani Finalist in Microsoft Student Ambassadors AI Competition.</p>
 </div>
 
-<!-- RESEARCH -->
 <div class="section" id="research">
     <h2>Research Interests</h2>
     <ul>
@@ -227,97 +221,64 @@
     </ul>
 </div>
 
-<!-- EXPERIENCE -->
 <div class="section" id="experience">
     <h2>Experience</h2>
-    
     <div class="card">
         <h3>Machine Learning Researcher – NCAI AI in Healthcare Lab</h3>
         <p><b>20/04/2024 – 31/05/2024</b></p>
-        <ul>
-            <li>Sound analysis of human body</li>
-            <li>Lung sound-based disease detection</li>
-        </ul>
+        <ul><li>Sound analysis of human body</li><li>Lung sound-based disease detection</li></ul>
     </div>
-
     <div class="card">
         <h3>GenAI Instructor – Wrapify Labs</h3>
         <p><b>01/10/2025 – Present</b></p>
-        <ul>
-            <li>Taught LLMs, RAG, prompt engineering</li>
-        </ul>
+        <ul><li>Taught LLMs, RAG, prompt engineering</li></ul>
     </div>
-
     <div class="card">
         <h3>Deep Learning Instructor – TCPC Community</h3>
         <p><b>25/09/2024 – 10/10/2024</b></p>
-        <ul>
-            <li>Taught CNN, RNN, GRU, Transformers</li>
-        </ul>
+        <ul><li>Taught CNN, RNN, GRU, Transformers</li></ul>
     </div>
 </div>
 
-<!-- PROJECTS -->
 <div class="section" id="projects">
     <h2>Projects</h2>
-
     <div class="card">
         <h3>NeuroShield – Multimodal Wearable for Seizure Detection</h3>
-        <img src="neuroshield.png" class="project-img">
+        <img src="neuroshield.png" class="project-img" onclick="openModal(this.src)">
         <p>Real-time tonic-clonic seizure detection using ChronoNet + EMG + PPG + MPU9250 with GPS alerts.</p>
-
         <a class="btn" href="https://github.com/NeuroShield-A-Wearable-device/Neuroshield">GitHub Repo</a>
     </div>
-
     <div class="card">
         <h3>RespiraSense – Lung Disease Detection (CNN + MFCC)</h3>
-        <img src="net.png" class="project-img">
+        <img src="net.png" class="project-img" onclick="openModal(this.src)">
         <p>CNN classifier for respiratory disease prediction using MFCC + Chroma.</p>
-
         <a class="btn" href="https://github.com/hasanJehangir/RespiraSense">GitHub Repo</a>
     </div>
-
     <div class="card">
         <h3>MelanoGuard – Melanoma Detector (Azure)</h3>
-        <img src="interface.png" class="project-img">
+        <img src="interface.png" class="project-img" onclick="openModal(this.src)">
         <p>Skin cancer detection model with 94% accuracy.</p>
-
         <a class="btn" href="https://github.com/hasanJehangir/MelanoGuard">GitHub Repo</a>
     </div>
-
     <div class="card">
         <h3>Sautt-ul-Haq – RAG System on Islamic Texts</h3>
-        <img src="chatbot.jfif" class="project-img">
+        <img src="chatbot.jfif" class="project-img" onclick="openModal(this.src)">
         <p>RAG system trained on Quran, Ahadith, Tafseer.</p>
-
         <a class="btn" href="https://github.com/hasanJehangir/Saut-ul-Haqq">GitHub Repo</a>
     </div>
 </div>
 
-<!-- PUBLICATIONS -->
 <div class="section" id="publications">
     <h2>Publications</h2>
-
     <div class="card">
         <h3>Exploring Body Sound Analysis for AI/ML</h3>
         <p>Article discussing how human body sounds can be used for ML and healthcare signals.</p>
-        <a class="btn" href="https://medium.com/@hasanjehangir6/exploring-body-sound-analysis-for-ai-ml-a71145bdc8eb">
-            Read Article
-        </a>
+        <a class="btn" href="https://medium.com/@hasanjehangir6/exploring-body-sound-analysis-for-ai-ml-a71145bdc8eb">Read Article</a>
     </div>
-
-    <div class="card">
-        <h3>NeuroShield Research Paper (Under Review)</h3>
-        <p>PeerJ Journal</p>
-    </div>
-
-    <div class="card">
-        <h3>Patent (In Process)</h3>
-        <p>NeuroShield wearable technology</p>
-    </div>
+    <div class="card"><h3>NeuroShield Research Paper (Under Review)</h3><p>PeerJ Journal</p></div>
+    <div class="card"><h3>Patent (In Process)</h3><p>NeuroShield wearable technology</p></div>
 </div>
 
-<!-- SKILLS -->
 <div class="section" id="skills">
     <h2>Skills</h2>
     <ul>
@@ -329,7 +290,6 @@
     </ul>
 </div>
 
-<!-- CONTACT -->
 <div class="section" id="contact">
     <h2>Contact</h2>
     <p><b>Email:</b> hasanjehangir6@gmail.com</p>
@@ -337,15 +297,18 @@
     <p><b>Address:</b> Swabi, Pakistan</p>
 </div>
 
-<div class="footer">
-    © 2025 Hasan Jehangir – Academic Portfolio
+<div class="footer">© 2025 Hasan Jehangir – Academic Portfolio</div>
+
+<!-- IMAGE MODAL -->
+<div id="imgModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg">
 </div>
 
 <script>
-    function toggleDarkMode() {
-        document.body.classList.toggle("dark");
-    }
+function toggleDarkMode() { document.body.classList.toggle("dark"); }
+function openModal(src) { document.getElementById('modalImg').src = src; document.getElementById('imgModal').style.display='block'; }
+function closeModal() { document.getElementById('imgModal').style.display='none'; }
 </script>
-
 </body>
 </html>
