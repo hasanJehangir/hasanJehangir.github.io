@@ -13,7 +13,7 @@
             margin: 0;
             font-family: "Poppins", sans-serif;
             transition: background 0.3s, color 0.3s;
-            background: #f3f6ff;
+            background: #f5f5f5; /* professional grey */
             color: #222;
         }
 
@@ -33,7 +33,7 @@
             background: #30363d;
         }
         body.dark header {
-            background: linear-gradient(135deg, #0a2342, #112d4e);
+            background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
         }
         body.dark .footer {
             background: #0d1117;
@@ -41,7 +41,7 @@
 
         header {
             text-align: center;
-            background: linear-gradient(135deg, #004aad, #007bff);
+            background: linear-gradient(135deg, #4a4a4a, #2e2e2e); /* grey gradient */
             color: white;
             padding: 40px;
         }
@@ -57,7 +57,7 @@
 
         nav {
             text-align: center;
-            background: #00367d;
+            background: #1f1f1f; /* dark grey */
             padding: 15px;
         }
 
@@ -70,7 +70,7 @@
         }
 
         nav a:hover {
-            background: #0056c7;
+            background: #3a3a3a;
             border-radius: 5px;
         }
 
@@ -85,7 +85,7 @@
         }
 
         h2 {
-            border-left: 6px solid #007bff;
+            border-left: 6px solid #6c6c6c; /* grey accent */
             padding-left: 12px;
             margin-bottom: 20px;
         }
@@ -94,18 +94,18 @@
         .social-icons a {
             display: inline-block;
             margin: 0 10px;
-            font-size: 28px;
+            font-size: 20px;
             text-decoration: none;
             color: white;
         }
 
         /* Cards */
         .card {
-            background: #eef3ff;
+            background: #ececec;
             padding: 20px;
             margin: 15px 0;
             border-radius: 12px;
-            border-left: 6px solid #4c8df5;
+            border-left: 6px solid #8d8d8d;
         }
         body.dark .card {
             background: #1d2330;
@@ -123,7 +123,7 @@
         /* Buttons */
         .btn {
             padding: 10px 20px;
-            background: #006eff;
+            background: #5b5b5b;
             color: white;
             text-decoration: none;
             font-weight: 600;
@@ -132,7 +132,7 @@
             margin-top: 10px;
         }
         .btn:hover {
-            background: #004ecb;
+            background: #3a3a3a;
         }
 
         /* Dark Mode Button */
@@ -146,11 +146,12 @@
             border-radius: 20px;
             cursor: pointer;
             font-weight: bold;
+            z-index: 999;
         }
 
         .footer {
             text-align: center;
-            background: #00367d;
+            background: #1f1f1f;
             color: white;
             padding: 15px;
             margin-top: 30px;
@@ -168,18 +169,18 @@
     <img src="profile.jpeg" class="profile-pic" alt="Profile">
 
     <h1>Hasan Jehangir</h1>
-    <p>AI Researcher • Deep Learning/Machine Learning • Computer vison / Image Processing • Healthcare AI • Computational Neuroscience</p>
+    <p>AI Researcher • ML/DL Engineer • Computer Vision • Healthcare AI • Computational Neuroscience</p>
 
     <div class="social-icons">
-        <a href="https://github.com/hasanJehangir"> GitHub</a>
-        <a href="https://www.linkedin.com/in/hasan-j-397933232/"> LinkedIn</a>
-        <a href="mailto:hasanjehangir6@gmail.com">📧 Email</a>
+        <a href="https://github.com/hasanJehangir">GitHub</a>
+        <a href="https://www.linkedin.com/in/hasan-j-397933232/">LinkedIn</a>
+        <a href="mailto:hasanjehangir6@gmail.com">Email</a>
     </div>
 
     <br>
 
-    <a class="btn" href="Hasan_Jehangir's_CV.pdf" download>📄 Download Academic CV</a>
-    <a class="btn" href="Hasan's CV.pdf" download>📄 Download Job CV </a>
+    <a class="btn" href="Hasan_Jehangir's_CV.pdf" download>📄 Academic CV</a>
+    <a class="btn" href="Hasan's CV.pdf" download>📄 Job CV</a>
 </header>
 
 <nav>
@@ -197,8 +198,8 @@
     <h2>About Me</h2>
     <p>
         Passionate AI and Deep Learning researcher focusing on healthcare AI, biomedical signal processing,
-        computational neuroscience, and multimodal architectures. Only Pakistani Finalist in Microsoft Students AI competitions and experienced 
-        in building real-world AI applications end-to-end.
+        computational neuroscience, computer vision, and multimodal architectures.
+        Only Pakistani Finalist in Microsoft Student Ambassadors AI Competition.
     </p>
 </div>
 
@@ -210,7 +211,7 @@
         <li>Computational Neuroscience</li>
         <li>Brain–Computer Interfaces</li>
         <li>Multimodal Deep Learning</li>
-        <li>Computer vision / Image Processing</li>
+        <li>Computer Vision & Image Processing</li>
         <li>NLP, LLMs, RAG Architectures</li>
     </ul>
 </div>
@@ -240,7 +241,7 @@
         <h3>Deep Learning Instructor – TCPC Community</h3>
         <p><b>25/09/2024 – 10/10/2024</b></p>
         <ul>
-            <li>Taught and practice Deep learning concepts like CNN, RNN,, GRU, Transformer etc.</li>
+            <li>Taught CNN, RNN, GRU, Transformers</li>
         </ul>
     </div>
 </div>
@@ -249,19 +250,17 @@
 <div class="section" id="projects">
     <h2>Projects</h2>
 
-    <!-- PROJECT CARD TEMPLATE -->
     <div class="card">
         <h3>NeuroShield – Multimodal Wearable for Seizure Detection</h3>
-        <img src="<img src="neuroshield.png" class="project-img">
+        <img src="neuroshield.png" class="project-img">
         <p>Real-time tonic-clonic seizure detection using ChronoNet + EMG + PPG + MPU9250 with GPS alerts.</p>
 
-        
-        <a class="btn" href="#">🔗 GitHub Link (https://github.com/NeuroShield-A-Wearable-device/Neuroshield)</a>
+        <a class="btn" href="https://github.com/NeuroShield-A-Wearable-device/Neuroshield">GitHub Repo</a>
     </div>
 
     <div class="card">
         <h3>RespiraSense – Lung Disease Detection (CNN + MFCC)</h3>
-        <img src="<img src="net.png" class="project-img">
+        <img src="net.png" class="project-img">
         <p>CNN classifier for respiratory disease prediction using MFCC + Chroma.</p>
 
         <a class="btn" href="https://github.com/hasanJehangir/RespiraSense">GitHub Repo</a>
@@ -269,8 +268,7 @@
 
     <div class="card">
         <h3>MelanoGuard – Melanoma Detector (Azure)</h3>
-        <img src="<img src="interface.png" class="project-img">
-" class="project-img">
+        <img src="interface.png" class="project-img">
         <p>Skin cancer detection model with 94% accuracy.</p>
 
         <a class="btn" href="https://github.com/hasanJehangir/MelanoGuard">GitHub Repo</a>
@@ -278,10 +276,10 @@
 
     <div class="card">
         <h3>Sautt-ul-Haq – RAG System on Islamic Texts</h3>
-        <img src="<img src="chatbot.jfif" class="project-img">
+        <img src="chatbot.jfif" class="project-img">
         <p>RAG system trained on Quran, Ahadith, Tafseer.</p>
 
-        <a class="btn" href="#">🔗 GitHub Link (https://github.com/hasanJehangir/Saut-ul-Haqq)</a>
+        <a class="btn" href="https://github.com/hasanJehangir/Saut-ul-Haqq">GitHub Repo</a>
     </div>
 </div>
 
@@ -291,9 +289,7 @@
 
     <div class="card">
         <h3>Exploring Body Sound Analysis for AI/ML</h3>
-        <p>
-            Article discussing how human body sounds can be used for ML and healthcare signals.
-        </p>
+        <p>Article discussing how human body sounds can be used for ML and healthcare signals.</p>
         <a class="btn" href="https://medium.com/@hasanjehangir6/exploring-body-sound-analysis-for-ai-ml-a71145bdc8eb">
             Read Article
         </a>
