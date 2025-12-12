@@ -1,37 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hasan Jehangir – Academic Portfolio</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            background: #f2f6ff;
+            font-family: "Poppins", sans-serif;
+            transition: background 0.3s, color 0.3s;
+            background: #f3f6ff;
             color: #222;
         }
 
+        /* DARK MODE */
+        body.dark {
+            background: #0d1117;
+            color: #e6edf3;
+        }
+        body.dark .section {
+            background: #161b22;
+            border: 1px solid #30363d;
+        }
+        body.dark nav {
+            background: #0d1117;
+        }
+        body.dark nav a:hover {
+            background: #30363d;
+        }
+        body.dark header {
+            background: linear-gradient(135deg, #0a2342, #112d4e);
+        }
+        body.dark .footer {
+            background: #0d1117;
+        }
+
         header {
-            background: linear-gradient(135deg, #0045a5, #007bff);
+            text-align: center;
+            background: linear-gradient(135deg, #004aad, #007bff);
             color: white;
             padding: 40px;
-            text-align: center;
+        }
+
+        .profile-pic {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            margin-bottom: 15px;
         }
 
         nav {
-            background: #003b8d;
-            padding: 10px;
             text-align: center;
+            background: #00367d;
+            padding: 15px;
         }
 
         nav a {
             color: white;
-            padding: 10px 20px;
+            padding: 10px 18px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
+            transition: 0.3s;
         }
 
         nav a:hover {
@@ -40,178 +75,252 @@
         }
 
         .section {
-            padding: 40px;
-            max-width: 900px;
+            max-width: 1050px;
             margin: auto;
             background: white;
-            margin-top: 20px;
-            border-radius: 10px;
+            padding: 35px;
+            border-radius: 12px;
+            margin-top: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.06);
         }
 
         h2 {
-            color: #0045a5;
             border-left: 6px solid #007bff;
-            padding-left: 10px;
+            padding-left: 12px;
+            margin-bottom: 20px;
         }
 
-        ul {
-            line-height: 1.8;
+        /* Social Icons */
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 28px;
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Cards */
+        .card {
+            background: #eef3ff;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 12px;
+            border-left: 6px solid #4c8df5;
+        }
+        body.dark .card {
+            background: #1d2330;
+            border-left: 6px solid #58a6ff;
+        }
+
+        .project-img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            object-fit: cover;
+            background: #ddd;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 10px 20px;
+            background: #006eff;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #004ecb;
+        }
+
+        /* Dark Mode Button */
+        .toggle-btn {
+            position: fixed;
+            top: 15px;
+            right: 20px;
+            background: #222;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
         }
 
         .footer {
-            background: #003b8d;
+            text-align: center;
+            background: #00367d;
             color: white;
             padding: 15px;
-            text-align: center;
             margin-top: 30px;
         }
+
     </style>
 </head>
 
 <body>
 
+<!-- DARK MODE BUTTON -->
+<div class="toggle-btn" onclick="toggleDarkMode()">🌙 Dark / ☀️ Light</div>
+
 <header>
+    <img src="profile.jpeg" class="profile-pic" alt="Profile">
+
     <h1>Hasan Jehangir</h1>
-    <p>AI & Deep Learning Specialist | Healthcare AI Researcher | Computational Neuroscience</p>
-    <p>Email: <a style="color: #a8e0ff;" href="mailto:hasanjehangir6@gmail.com">hasanjehangir6@gmail.com</a></p>
+    <p>AI Researcher • Deep Learning/Machine Learning • Computer vison / Image Processing • Healthcare AI • Computational Neuroscience</p>
+
+    <div class="social-icons">
+        <a href="https://github.com/hasanJehangir"> GitHub</a>
+        <a href="https://www.linkedin.com/in/hasan-j-397933232/"> LinkedIn</a>
+        <a href="mailto:hasanjehangir6@gmail.com">📧 Email</a>
+    </div>
+
+    <br>
+
+    <a class="btn" href="Hasan_Jehangir's_CV.pdf" download>📄 Download Academic CV</a>
+    <a class="btn" href="Hasan's CV.pdf" download>📄 Download Job CV </a>
 </header>
 
 <nav>
     <a href="#about">About</a>
-    <a href="#research">Research Interests</a>
+    <a href="#research">Research</a>
     <a href="#experience">Experience</a>
-    <a href="#education">Education</a>
     <a href="#projects">Projects</a>
     <a href="#publications">Publications</a>
-    <a href="#awards">Awards</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
 </nav>
-
 
 <!-- ABOUT -->
 <div class="section" id="about">
     <h2>About Me</h2>
     <p>
-        AI and deep learning specialist passionate about healthcare AI, computational neuroscience, multimodal models, 
-        and brain–computer intelligence. Experienced in CNNs, RNNs, LSTMs, GRUs, Transformers, GANs, and multimodal 
-        architectures. Worked on melanoma prediction, deepfake detection, lung sound analysis, and seizure detection 
-        wearables. Finalist in global AI competitions and experienced with cloud deployment.
+        Passionate AI and Deep Learning researcher focusing on healthcare AI, biomedical signal processing,
+        computational neuroscience, and multimodal architectures. Only Pakistani Finalist in Microsoft Students AI competitions and experienced 
+        in building real-world AI applications end-to-end.
     </p>
 </div>
-
 
 <!-- RESEARCH -->
 <div class="section" id="research">
     <h2>Research Interests</h2>
     <ul>
-        <li>Artificial Intelligence for Healthcare & Medicine</li>
-        <li>Computational Neuroscience & Brain–Computer Interfaces</li>
+        <li>Artificial Intelligence for Healthcare</li>
+        <li>Computational Neuroscience</li>
+        <li>Brain–Computer Interfaces</li>
         <li>Multimodal Deep Learning</li>
-        <li>Computer Vision & Image Analysis</li>
-        <li>NLP, LLMs, RAG Systems</li>
-        <li>Predictive Modeling & Data Science</li>
+        <li>Computer vision / Image Processing</li>
+        <li>NLP, LLMs, RAG Architectures</li>
     </ul>
 </div>
-
 
 <!-- EXPERIENCE -->
 <div class="section" id="experience">
-    <h2>Work Experience</h2>
+    <h2>Experience</h2>
+    
+    <div class="card">
+        <h3>Machine Learning Researcher – NCAI AI in Healthcare Lab</h3>
+        <p><b>20/04/2024 – 31/05/2024</b></p>
+        <ul>
+            <li>Sound analysis of human body</li>
+            <li>Lung sound-based disease detection</li>
+        </ul>
+    </div>
 
-    <h3>NCAI AIH (AI in Healthcare Lab) – Machine Learning Researcher (20/04/2024 – 31/05/2024)</h3>
-    <ul>
-        <li>Performed sound analysis of human body</li>
-        <li>Trained model for lung disease detection using lung sounds</li>
-        <li>Researched multiple human body-generated sound features</li>
-    </ul>
+    <div class="card">
+        <h3>GenAI Instructor – Wrapify Labs</h3>
+        <p><b>01/10/2025 – Present</b></p>
+        <ul>
+            <li>Taught LLMs, RAG, prompt engineering</li>
+        </ul>
+    </div>
 
-    <h3>Wrapify Labs – GenAI Instructor (01/10/2025 – Present)</h3>
-    <ul>
-        <li>Taught LLMs, RAG, prompt engineering & GenAI deployment</li>
-        <li>Guided students in building AI applications</li>
-        <li>Updated course content with advanced GenAI techniques</li>
-    </ul>
-
-    <h3>TCPC Community – Deep Learning Instructor (25/09/2024 – 10/10/2024)</h3>
-    <ul>
-        <li>Taught CNNs, RNNs, LSTMs, GRUs, NLP & RAG</li>
-        <li>Conducted hands-on sessions for 100+ participants</li>
-    </ul>
+    <div class="card">
+        <h3>Deep Learning Instructor – TCPC Community</h3>
+        <p><b>25/09/2024 – 10/10/2024</b></p>
+        <ul>
+            <li>Taught and practice Deep learning concepts like CNN, RNN,, GRU, Transformer etc.</li>
+        </ul>
+    </div>
 </div>
-
-
-<!-- EDUCATION -->
-<div class="section" id="education">
-    <h2>Education</h2>
-
-    <h3>BSc in Data Science — UET Peshawar (2021–2025)</h3>
-
-    <h3>Intermediate Pre-Medical — Peace College Abbottabad (2016–2018)</h3>
-
-    <h3>Additional Mathematics — Private (2020–2021)</h3>
-</div>
-
 
 <!-- PROJECTS -->
 <div class="section" id="projects">
     <h2>Projects</h2>
-    <ul>
-        <li><b>NeuroShield:</b> A multimodal wearable for seizure detection using ChronoNet + EMG + PPG + MPU9250 → Real-time detection + GPS alert.</li>
 
-        <li><b>RespiraSense:</b> Lung disease prediction using MFCC + Chroma + CNN  
-            <a href="https://github.com/HasanJehangir-DataScientist/RespiraSense">GitHub Link</a>
-        </li>
+    <!-- PROJECT CARD TEMPLATE -->
+    <div class="card">
+        <h3>NeuroShield – Multimodal Wearable for Seizure Detection</h3>
+        <img src="<img src="neuroshield.png" class="project-img">
+        <p>Real-time tonic-clonic seizure detection using ChronoNet + EMG + PPG + MPU9250 with GPS alerts.</p>
 
-        <li><b>MelanoGuard:</b> Melanoma prediction using Azure Custom Vision (94% accuracy)  
-            <a href="https://github.com/HasanJehangir-DataScientist/MelanoGuard">GitHub Link</a>
-        </li>
+        
+        <a class="btn" href="#">🔗 GitHub Link (https://github.com/NeuroShield-A-Wearable-device/Neuroshield)</a>
+    </div>
 
-        <li><b>CleanCapture:</b> Real-time recyclable item detection using Azure + Streamlit</li>
+    <div class="card">
+        <h3>RespiraSense – Lung Disease Detection (CNN + MFCC)</h3>
+        <img src="<img src="net.png" class="project-img">
+        <p>CNN classifier for respiratory disease prediction using MFCC + Chroma.</p>
 
-        <li><b>Sautt-ul-Haq:</b> RAG system trained on Quran, Ahadith, Tafseer</li>
-    </ul>
+        <a class="btn" href="https://github.com/hasanJehangir/RespiraSense">GitHub Repo</a>
+    </div>
+
+    <div class="card">
+        <h3>MelanoGuard – Melanoma Detector (Azure)</h3>
+        <img src="<img src="interface.png" class="project-img">
+" class="project-img">
+        <p>Skin cancer detection model with 94% accuracy.</p>
+
+        <a class="btn" href="https://github.com/hasanJehangir/MelanoGuard">GitHub Repo</a>
+    </div>
+
+    <div class="card">
+        <h3>Sautt-ul-Haq – RAG System on Islamic Texts</h3>
+        <img src="<img src="chatbot.jfif" class="project-img">
+        <p>RAG system trained on Quran, Ahadith, Tafseer.</p>
+
+        <a class="btn" href="#">🔗 GitHub Link (https://github.com/hasanJehangir/Saut-ul-Haqq)</a>
+    </div>
 </div>
-
 
 <!-- PUBLICATIONS -->
 <div class="section" id="publications">
-    <h2>Publications & Articles</h2>
-    <ul>
-        <li><b>Exploring Body Sound Analysis for AI/ML</b> – Medium  
-            <a href="https://medium.com/@hasanjehangir6/exploring-body-sound-analysis-for-ai-ml-a71145bdc8eb">Read Article</a>
-        </li>
+    <h2>Publications</h2>
 
-        <li><b>NeuroShield Research Paper</b> – PeerJ (Under Review)</li>
+    <div class="card">
+        <h3>Exploring Body Sound Analysis for AI/ML</h3>
+        <p>
+            Article discussing how human body sounds can be used for ML and healthcare signals.
+        </p>
+        <a class="btn" href="https://medium.com/@hasanjehangir6/exploring-body-sound-analysis-for-ai-ml-a71145bdc8eb">
+            Read Article
+        </a>
+    </div>
 
-        <li><b>Patent:</b> NeuroShield wearable (In process)</li>
-    </ul>
+    <div class="card">
+        <h3>NeuroShield Research Paper (Under Review)</h3>
+        <p>PeerJ Journal</p>
+    </div>
+
+    <div class="card">
+        <h3>Patent (In Process)</h3>
+        <p>NeuroShield wearable technology</p>
+    </div>
 </div>
-
-
-<!-- AWARDS -->
-<div class="section" id="awards">
-    <h2>Honours & Awards</h2>
-    <ul>
-        <li>World Finalist – Microsoft Ambassadors AI Project (Top 5 worldwide)</li>
-        <li>Only finalist from Pakistan</li>
-    </ul>
-</div>
-
 
 <!-- SKILLS -->
 <div class="section" id="skills">
     <h2>Skills</h2>
     <ul>
-        <li><b>Machine Learning:</b> CNN, RNN, LSTM, GRU, Transformers, Sci-kit Learn, OpenCV</li>
-        <li><b>Electronics:</b> IoT, Arduino, EMG/EEG Sensors</li>
-        <li><b>Programming:</b> Python, HTML, CSS, C++, Java</li>
-        <li><b>Cloud:</b> Azure, Azure Custom Vision</li>
-        <li><b>Tools:</b> Librosa, NumPy, Pandas, Matplotlib</li>
-        <li><b>Languages:</b> English (B2), Urdu (Native)</li>
+        <li>Deep Learning – CNN, RNN, LSTM, GRU, Transformers</li>
+        <li>NLP, RAG, Prompt Engineering</li>
+        <li>Python, HTML, CSS, C++, Java</li>
+        <li>Electronics – IoT, EMG, EEG, Arduino</li>
+        <li>Azure Cloud, Azure Custom Vision</li>
     </ul>
 </div>
-
 
 <!-- CONTACT -->
 <div class="section" id="contact">
@@ -221,10 +330,15 @@
     <p><b>Address:</b> Swabi, Pakistan</p>
 </div>
 
-
 <div class="footer">
-    © 2025 Hasan Jehangir — Academic Portfolio
+    © 2025 Hasan Jehangir – Academic Portfolio
 </div>
+
+<script>
+    function toggleDarkMode() {
+        document.body.classList.toggle("dark");
+    }
+</script>
 
 </body>
 </html>
