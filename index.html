@@ -1,26 +1,230 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>My Academic Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasan Jehangir – Academic Portfolio</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f2f6ff;
+            color: #222;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0045a5, #007bff);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        nav {
+            background: #003b8d;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background: #0056c7;
+            border-radius: 5px;
+        }
+
+        .section {
+            padding: 40px;
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #0045a5;
+            border-left: 6px solid #007bff;
+            padding-left: 10px;
+        }
+
+        ul {
+            line-height: 1.8;
+        }
+
+        .footer {
+            background: #003b8d;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
 </head>
-<body style="font-family: Arial; max-width: 800px; margin: 40px auto;">
-  <h1>Your Name</h1>
-  <p>Welcome to my academic portfolio!</p>
 
-  <h2>About Me</h2>
-  <p>Write about your education, research interests, achievements.</p>
+<body>
 
-  <h2>Projects</h2>
-  <ul>
-    <li>Project 1</li>
-    <li>Project 2</li>
-  </ul>
+<header>
+    <h1>Hasan Jehangir</h1>
+    <p>AI & Deep Learning Specialist | Healthcare AI Researcher | Computational Neuroscience</p>
+    <p>Email: <a style="color: #a8e0ff;" href="mailto:hasanjehangir6@gmail.com">hasanjehangir6@gmail.com</a></p>
+</header>
 
-  <h2>CV</h2>
-  <p><a href="CV.pdf">Download my CV</a></p>
+<nav>
+    <a href="#about">About</a>
+    <a href="#research">Research Interests</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#publications">Publications</a>
+    <a href="#awards">Awards</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-  <h2>Contact</h2>
-  <p>Email: your@email.com</p>
+
+<!-- ABOUT -->
+<div class="section" id="about">
+    <h2>About Me</h2>
+    <p>
+        AI and deep learning specialist passionate about healthcare AI, computational neuroscience, multimodal models, 
+        and brain–computer intelligence. Experienced in CNNs, RNNs, LSTMs, GRUs, Transformers, GANs, and multimodal 
+        architectures. Worked on melanoma prediction, deepfake detection, lung sound analysis, and seizure detection 
+        wearables. Finalist in global AI competitions and experienced with cloud deployment.
+    </p>
+</div>
+
+
+<!-- RESEARCH -->
+<div class="section" id="research">
+    <h2>Research Interests</h2>
+    <ul>
+        <li>Artificial Intelligence for Healthcare & Medicine</li>
+        <li>Computational Neuroscience & Brain–Computer Interfaces</li>
+        <li>Multimodal Deep Learning</li>
+        <li>Computer Vision & Image Analysis</li>
+        <li>NLP, LLMs, RAG Systems</li>
+        <li>Predictive Modeling & Data Science</li>
+    </ul>
+</div>
+
+
+<!-- EXPERIENCE -->
+<div class="section" id="experience">
+    <h2>Work Experience</h2>
+
+    <h3>NCAI AIH (AI in Healthcare Lab) – Machine Learning Researcher (20/04/2024 – 31/05/2024)</h3>
+    <ul>
+        <li>Performed sound analysis of human body</li>
+        <li>Trained model for lung disease detection using lung sounds</li>
+        <li>Researched multiple human body-generated sound features</li>
+    </ul>
+
+    <h3>Wrapify Labs – GenAI Instructor (01/10/2025 – Present)</h3>
+    <ul>
+        <li>Taught LLMs, RAG, prompt engineering & GenAI deployment</li>
+        <li>Guided students in building AI applications</li>
+        <li>Updated course content with advanced GenAI techniques</li>
+    </ul>
+
+    <h3>TCPC Community – Deep Learning Instructor (25/09/2024 – 10/10/2024)</h3>
+    <ul>
+        <li>Taught CNNs, RNNs, LSTMs, GRUs, NLP & RAG</li>
+        <li>Conducted hands-on sessions for 100+ participants</li>
+    </ul>
+</div>
+
+
+<!-- EDUCATION -->
+<div class="section" id="education">
+    <h2>Education</h2>
+
+    <h3>BSc in Data Science — UET Peshawar (2021–2025)</h3>
+
+    <h3>Intermediate Pre-Medical — Peace College Abbottabad (2016–2018)</h3>
+
+    <h3>Additional Mathematics — Private (2020–2021)</h3>
+</div>
+
+
+<!-- PROJECTS -->
+<div class="section" id="projects">
+    <h2>Projects</h2>
+    <ul>
+        <li><b>NeuroShield:</b> A multimodal wearable for seizure detection using ChronoNet + EMG + PPG + MPU9250 → Real-time detection + GPS alert.</li>
+
+        <li><b>RespiraSense:</b> Lung disease prediction using MFCC + Chroma + CNN  
+            <a href="https://github.com/HasanJehangir-DataScientist/RespiraSense">GitHub Link</a>
+        </li>
+
+        <li><b>MelanoGuard:</b> Melanoma prediction using Azure Custom Vision (94% accuracy)  
+            <a href="https://github.com/HasanJehangir-DataScientist/MelanoGuard">GitHub Link</a>
+        </li>
+
+        <li><b>CleanCapture:</b> Real-time recyclable item detection using Azure + Streamlit</li>
+
+        <li><b>Sautt-ul-Haq:</b> RAG system trained on Quran, Ahadith, Tafseer</li>
+    </ul>
+</div>
+
+
+<!-- PUBLICATIONS -->
+<div class="section" id="publications">
+    <h2>Publications & Articles</h2>
+    <ul>
+        <li><b>Exploring Body Sound Analysis for AI/ML</b> – Medium  
+            <a href="https://medium.com/@hasanjehangir6/exploring-body-sound-analysis-for-ai-ml-a71145bdc8eb">Read Article</a>
+        </li>
+
+        <li><b>NeuroShield Research Paper</b> – PeerJ (Under Review)</li>
+
+        <li><b>Patent:</b> NeuroShield wearable (In process)</li>
+    </ul>
+</div>
+
+
+<!-- AWARDS -->
+<div class="section" id="awards">
+    <h2>Honours & Awards</h2>
+    <ul>
+        <li>World Finalist – Microsoft Ambassadors AI Project (Top 5 worldwide)</li>
+        <li>Only finalist from Pakistan</li>
+    </ul>
+</div>
+
+
+<!-- SKILLS -->
+<div class="section" id="skills">
+    <h2>Skills</h2>
+    <ul>
+        <li><b>Machine Learning:</b> CNN, RNN, LSTM, GRU, Transformers, Sci-kit Learn, OpenCV</li>
+        <li><b>Electronics:</b> IoT, Arduino, EMG/EEG Sensors</li>
+        <li><b>Programming:</b> Python, HTML, CSS, C++, Java</li>
+        <li><b>Cloud:</b> Azure, Azure Custom Vision</li>
+        <li><b>Tools:</b> Librosa, NumPy, Pandas, Matplotlib</li>
+        <li><b>Languages:</b> English (B2), Urdu (Native)</li>
+    </ul>
+</div>
+
+
+<!-- CONTACT -->
+<div class="section" id="contact">
+    <h2>Contact</h2>
+    <p><b>Email:</b> hasanjehangir6@gmail.com</p>
+    <p><b>Phone:</b> +92 349 926 2254</p>
+    <p><b>Address:</b> Swabi, Pakistan</p>
+</div>
+
+
+<div class="footer">
+    © 2025 Hasan Jehangir — Academic Portfolio
+</div>
+
 </body>
 </html>
