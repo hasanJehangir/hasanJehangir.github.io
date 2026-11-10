@@ -105,14 +105,14 @@ button:focus-visible,a:focus-visible { outline:2px solid var(--gold); outline-of
 .footer span {color:#ebbdce;}
 .modal {position:fixed;inset:0;z-index:60;display:grid;place-items:center;background:#070918c9;backdrop-filter:blur(15px);padding:20px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;}
 .modal.open {opacity:1;visibility:visible;}
-.modal-panel {position:relative;width:min(100%,650px);padding:clamp(26px,5vw,45px);background:radial-gradient(ellipse at top,#613150,#23162e 72%);border:1px solid #f5c9d36e;box-shadow:0 20px 90px #0009;border-radius:22px;text-align:center;transform:translateY(18px) scale(.97);transition:transform .3s;}
+.modal-panel {position:relative;width:min(100%,650px);max-height:92dvh;overflow-y:auto;padding:clamp(20px,4vw,32px);background:radial-gradient(ellipse at top,#613150,#23162e 72%);border:1px solid #f5c9d36e;box-shadow:0 20px 90px #0009;border-radius:22px;text-align:center;transform:translateY(18px) scale(.97);transition:transform .3s;}
 .modal.open .modal-panel {transform:translateY(0) scale(1);}
 .close-modal {position:absolute;right:16px;top:13px;background:transparent;color:#ffe0e5;border:none;font-size:28px;cursor:pointer;padding:5px 9px;}
 .modal-kicker {font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);}
 .modal-title {font-family:'Italiana',serif;color:#fff1e7;font-size:clamp(27px,5vw,39px);margin:12px 0;}
 .lyric {font-family:'Italiana',serif;color:#f7c0d3;font-size:clamp(22px,4vw,33px);line-height:1.38;margin:12px 0 18px;}
 .modal-description {font-size:12px;color:#dfbfcd;line-height:1.8;margin:0 0 20px;}
-.video-wrap {border-radius:12px;overflow:hidden;aspect-ratio:16/9;background:#100b1e;border:1px solid #ffcfde4a;}
+.video-wrap {border-radius:12px;overflow:hidden;width:min(100%,245px);aspect-ratio:9/16;margin:0 auto;background:#100b1e;border:1px solid #ffcfde4a;}
 .video-wrap iframe {width:100%;height:100%;border:0;display:block;}
 .song-link {display:inline-block;color:#fbd9df;margin-top:16px;font-size:12px;text-underline-offset:4px;}
 .bloom-flash {position:fixed;z-index:31;pointer-events:none;border:1px solid #ffe4e3;border-radius:50%;height:30px;width:30px;transform:translate(-50%,-50%);animation:bloomFlash .8s ease-out forwards;}
@@ -189,12 +189,12 @@ button:focus-visible,a:focus-visible { outline:2px solid var(--gold); outline-of
 <div class="modal" id="songModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitle">
  <div class="modal-panel">
   <button type="button" class="close-modal" id="closeModal" aria-label="Close music">×</button>
-  <p class="modal-kicker">One song. One little thought.</p>
-  <h2 class="modal-title" id="modalTitle">Phir Na Aisi Raat Aayegi</h2>
+  <p class="modal-kicker">For you, Wano ✧</p>
+  <h2 class="modal-title" id="modalTitle">A beautiful song dedicated to a beautiful soul</h2>
   <p class="lyric">“Kya ye mumkin hai kabhi<br>Tum mere ho paaoge...”</p>
-  <p class="modal-description">A beautiful Arijit Singh song. Tap play below to hear the official video — and let the evening slow down a little. ✨</p>
+  <p class="modal-description">Just this little musical moment, especially for you. ✨</p>
   <div class="video-wrap" id="videoWrap"><!-- video inserted on click only --></div>
-  <a class="song-link" href="https://www.youtube.com/watch?v=OXu6dgbUx1s" target="_blank" rel="noopener noreferrer">Listen on YouTube ↗</a>
+  <a class="song-link" href="https://www.youtube.com/shorts/eSCpNcDMPaU" target="_blank" rel="noopener noreferrer">Listen on YouTube ↗</a>
  </div>
 </div>
 <script>
@@ -247,7 +247,7 @@ button:focus-visible,a:focus-visible { outline:2px solid var(--gold); outline-of
  if('IntersectionObserver' in window&&!reduce){const io=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){entry.target.classList.add('visible');io.unobserve(entry.target);}}},{threshold:.17});verses.forEach((v,i)=>{v.style.transitionDelay=`${Math.min(i,4)*.1}s`;io.observe(v)});} else {verses.forEach(v=>v.classList.add('visible'));}
  function pulse(ev){if(reduce)return;const r=ev.currentTarget.getBoundingClientRect();const f=document.createElement('span');f.className='bloom-flash';f.style.left=(r.left+r.width/2)+'px';f.style.top=(r.top+r.height/2)+'px';document.body.appendChild(f);f.addEventListener('animationend',()=>f.remove(),{once:true});}
  const modal=document.getElementById('songModal'), wrap=document.getElementById('videoWrap');const btn=document.getElementById('playSong'),close=document.getElementById('closeModal');
- function openModal(e){pulse(e);shower(22);wrap.innerHTML='<iframe title="Phir Na Aisi Raat Aayegi — T-Series official music video" src="https://www.youtube-nocookie.com/embed/OXu6dgbUx1s?autoplay=1&rel=0" loading="eager" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';close.focus();}
+ function openModal(e){pulse(e);shower(22);wrap.innerHTML='<iframe title="A beautiful song dedicated to a beautiful soul" src="https://www.youtube-nocookie.com/embed/eSCpNcDMPaU?autoplay=1&playsinline=1&rel=0" loading="eager" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';close.focus();}
  function closeMusic(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');wrap.innerHTML='';document.body.style.overflow='';btn.focus();}
  btn.addEventListener('click',openModal);close.addEventListener('click',closeMusic);modal.addEventListener('click',e=>{if(e.target===modal)closeMusic()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))closeMusic()});
 })();
